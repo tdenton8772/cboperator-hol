@@ -54,6 +54,10 @@ sudo minikube config set memory 4096
 sudo minikube config set cpus 4
 ```
 
+`$ sudo minikube delete`
+`$ sudo minikube start`
+
+
 `$ sudo minikube config view`
 	
 	- cpus: 4

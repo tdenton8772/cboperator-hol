@@ -43,5 +43,13 @@ spec:
           initialDelaySeconds: 3
           periodSeconds: 3
         resources: {}
+        volumeMounts:
+        - mountPath: /var/run/secrets/couchbase.com/couchbase-operator
+          name: couchbase-operator
+          readOnly: true
+      volumes:
+      - name: couchbase-operator
+        secret:
+          secretName: couchbase-operator
       serviceAccountName: couchbase-operator
 status: {}
